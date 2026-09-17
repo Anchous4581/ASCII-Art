@@ -1,11 +1,16 @@
 # data.py
 import pygame
 
-char_list = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
+char_list = [
+    " ", ".", "'", "`", "^", "\"", ",", ":", ";", "I", "l", "!", "i", 
+    ">", "<", "~", "+", "_", "-", "?", "]", "[", "}", "{", "1", ")", 
+    "(", "|", "\\", "/", "f", "j", "r", "x", "n", "u", "v", "c", "z", 
+    "X", "Y", "U", "J", "C", "L", "Q", "0", "O", "Z", "m", "w", "q", 
+    "p", "d", "b", "k", "h", "a", "o", "*", "#", "M", "W", "&", "8", 
+    "%", "B", "@", "$"
+]
 
-image = [pygame.image.load("data/1.png")]
-image_after = []
+image_path = "data/hands.png"
+image = pygame.image.load(image_path)
 
-# временные данные каждого изображения
-pixels = []
-brightness = []
+font = "Courier New"
