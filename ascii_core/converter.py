@@ -1,6 +1,6 @@
 # converter.py
-from config import char_list, default_width
-from image import load_image, resize_image
+from .config import char_list, default_width
+from .image import load_image, resize_image
 
 def get_brightness(image):
     brightness = []

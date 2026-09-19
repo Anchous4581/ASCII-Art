@@ -1,6 +1,6 @@
 # renderer.py
 from PIL import Image, ImageDraw, ImageFont
-from config import default_font
+from .config import default_font
 
 
 def render_ascii_to_image(
@@ -15,8 +15,6 @@ def render_ascii_to_image(
     char_width = int(font.getlength("A"))
 
     bbox = font.getbbox("A")
-    print("bbox:", bbox)
-    print("font size:", font_size)
     char_height = bbox[3] - bbox[1]
 
     width = char_width * max(len(line) for line in ascii_image)
@@ -40,6 +38,5 @@ def render_ascii_to_image(
 
     for text in ["A", "Ag", "ABC", "|||"]:
         bbox = font.getbbox(text)
-        print(text, bbox)
 
     return image
